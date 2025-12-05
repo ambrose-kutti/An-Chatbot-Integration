@@ -219,7 +219,7 @@ def search_documents(query: str, k=3):
                 
                 # If we found highly relevant history, prioritize it
                 if len(results) >= 1 and ('he' in query.lower() or 'she' in query.lower() 
-                                         or 'his' in query.lower() or 'her' in query.lower()):
+                                        or 'his' in query.lower() or 'her' in query.lower()):
                     # For pronoun-based follow-ups, history is usually enough
                     return results
     
@@ -406,12 +406,12 @@ async def home(request: Request):
 @app.on_event("startup")
 async def startup_event():
     print("\n" + "="*50)
-    print("🚀 SMART CHATBOT STARTING")
+    print(" SMART CHATBOT STARTING")
     print("="*50)
-    print(f"🤖 LLM Model: {LLM_MODEL}")
-    print(f"📁 Chroma Directory: {CHROMA_DIR}")
-    print(f"💾 Collection: {COLLECTION_NAME}")
-    print("💭 Chat History: Enabled")
+    print(f" LLM Model: {LLM_MODEL}")
+    print(f" Chroma Directory: {CHROMA_DIR}")
+    print(f" Collection: {COLLECTION_NAME}")
+    print(" Chat History: Enabled")
     print("="*50)
     print("\n🔧 Debug Endpoints:")
     print("   http://localhost:8000/debug/history - View chat history")
