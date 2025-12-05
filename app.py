@@ -412,7 +412,7 @@ async def startup_event():
     print(f" Collection: {COLLECTION_NAME}")
     print(" Chat History: Enabled")
     print("="*50)
-    print("\n🔧 Debug Endpoints:")
+    print("\n Debug Endpoints:")
     print("   http://localhost:8000/debug/history - View chat history")
     print("   http://localhost:8000/debug/clear-history - Clear history")
     print("="*50 + "\n")
