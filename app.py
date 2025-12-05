@@ -1,4 +1,3 @@
-# FAST & OPTIMIZED APP.PY WITH HYBRID APPROACH + DEQUE CHAT HISTORY
 # -----------------------------------------------------
 # This version includes:
 # 1. Instant hybrid greetings
