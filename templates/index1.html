@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Floating Chat Widget -->
+    <div class="chat-widget">
+        <!-- Chat Header (visible when minimized) -->
+        <div class="widget-header" id="widget-header">
+            <div class="widget-title">
+                <div class="widget-icon">🤖</div>
+                <div class="widget-text">
+                    <h3>Chatbot Assistant</h3>
+                    <p>Ask questions and I will Clarify</p>
+                </div>
+            </div>
+            <div class="widget-controls">
+                <button class="widget-btn" id="refresh-btn" title="Refresh">
+                    <i class="fas fa-redo"></i>
+                </button>
+                <button class="widget-btn" id="minimize-btn" title="Minimize">
+                    <i class="fas fa-minus"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Chat Container (hidden when minimized) -->
+        <div class="widget-container" id="widget-container">
+            <!-- Chat Messages -->
+            <div class="widget-messages" id="messages">
+                <!-- Welcome message -->
+                <div class="message bot">
+                    <div class="message-bubble">
+                        Hello! I can answer your questions!
+                    </div>
+                    <div class="message-time">Just now</div>
+                </div>
+            </div>
+
+            <!-- Typing Indicator -->
+            <div class="widget-typing" id="typing" style="display: none;">
+                <div class="typing-indicator">
+                    <span>AI is typing</span>
+                    <div class="typing-dots">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="widget-input">
+                <div class="input-wrapper">
+                    <input type="text" id="user-input" placeholder="Ask about your questions..." autocomplete="off">
+                    <button id="send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="input-hint">
+                    Press Enter to send 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+    <script>
+        // Initialize widget
+        document.addEventListener('DOMContentLoaded', function() {
+            const widgetContainer = document.getElementById('widget-container');
+            const widgetHeader = document.getElementById('widget-header');
+            const minimizeBtn = document.getElementById('minimize-btn');
+            const refreshBtn = document.getElementById('refresh-btn');
+            const messagesDiv = document.getElementById('messages');
+            
+            // Start minimized
+            widgetContainer.style.display = 'none';
+            
+            // Toggle chat window
+            function toggleChat() {
+                if (widgetContainer.style.display === 'none') {
+                    // Open chat
+                    widgetContainer.style.display = 'flex';
+                    minimizeBtn.innerHTML = '<i class="fas fa-minus"></i>';
+                    minimizeBtn.title = "Minimize";
+                    document.getElementById('user-input').focus();
+                } else {
+                    // Close chat
+                    widgetContainer.style.display = 'none';
+                    minimizeBtn.innerHTML = '<i class="fas fa-window-maximize"></i>';
+                    minimizeBtn.title = "Maximize";
+                }
+            }
+            
+            // Header click opens chat
+            widgetHeader.addEventListener('click', function(e) {
+                if (e.target.closest('.widget-controls')) return; // Don't trigger if clicking controls
+                if (widgetContainer.style.display === 'none') {
+                    toggleChat();
+                }
+            });
+            
+            // Minimize button
+            minimizeBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                toggleChat();
+            });
+            
+            // Refresh button - directly refreshes without confirmation
+            refreshBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                
+                // Clear all messages except welcome
+                const welcomeMsg = messagesDiv.querySelector('.message.bot:first-child');
+                messagesDiv.innerHTML = '';
+                messagesDiv.appendChild(welcomeMsg);
+                
+                // Update welcome message time
+                const timeElement = welcomeMsg.querySelector('.message-time');
+                timeElement.textContent = 'Just now';
+                
+                // Show quick feedback
+                const originalText = refreshBtn.innerHTML;
+                refreshBtn.innerHTML = '<i class="fas fa-check"></i>';
+                refreshBtn.style.color = '#4CAF50';
+                
+                setTimeout(() => {
+                    refreshBtn.innerHTML = originalText;
+                    refreshBtn.style.color = '';
+                }, 1000);
+            });
+            
+            // Focus input when chat opens
+            widgetHeader.addEventListener('click', function() {
+                setTimeout(() => {
+                    document.getElementById('user-input').focus();
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>

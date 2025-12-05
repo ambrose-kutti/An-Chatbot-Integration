@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pandas
+langchain==0.2.15
+langchain-community==0.2.14
+langgraph
+chromadb
+mysql-connector-python
