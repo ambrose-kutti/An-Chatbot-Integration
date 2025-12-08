@@ -37,20 +37,24 @@ mysql-connector-python: latest
 │   ├── script.js
 │   └── style.css
 └── templates
-    └── index1.html
+    └── index.html
 ```
 
 ## 🛠️ Development Setup
 
 ### Python Setup
-1. Install Python (v3.8+ recommended)
+1. Install Python (v3.9+ recommended)
 2. Create a virtual environment: `python -m venv venv`
 3. Activate the environment:
    - Windows: `venv\Scripts\activate`
    - Unix/MacOS: `source venv/bin/activate`
 4. Install dependencies: `pip install -r requirements.txt` if needed also install the `pip install -r re.txt`
-5. Run the Chrom.py then app.py
-
+5. If you dont have Ollama download it and select the model you want to use (in this case (MISTRAL))
+6. Then pull the respected model in the terminal using the command
+   - `ollama pull mistral` (you can use your own choice of model)
+8. Run the chrom.py first to create the chroma DB
+9. Then the run the count.py to check how many files are there in the Chroma DB
+10. Finally run the app.py file
 
 
 ## 👥 Contributing
