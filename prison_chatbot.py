@@ -398,7 +398,7 @@ async def debug_clear_history():
 # ---------- HOME ROUTE ----------
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):
-    return templates.TemplateResponse("index1.html", {"request": request})
+    return templates.TemplateResponse("index.html", {"request": request})
 
 
 # ---------- STARTUP ----------
@@ -423,4 +423,4 @@ async def startup_event():
 # ---------- MAIN ----------
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8008)

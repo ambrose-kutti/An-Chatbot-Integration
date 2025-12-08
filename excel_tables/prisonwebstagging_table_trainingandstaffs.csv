@@ -1,0 +1,12 @@
+ok,course_id,training_name,topics,participants,guarding_staff,sponsored_by,mode_of_training,training,dpcs_remarks,jail_id
+1,4,BASIC COURSE FOR ASSISTANT JAILORS,Criminal Justice system ,"6  ,   8 ",9,DP&CS ,offline,NULL,NULL,NULL
+2,4,BASIC COURSE FOR ASSISTANT JAILORS,Criminal Justice system ,"5  ,   6  ,   7 ",9,BPR&D ,offline,NULL,NULL,11
+3,4,BASIC COURSE FOR ASSISTANT JAILORS,Forensic science ,"5  ,   9 ",5,"DP&CS  ,   BPR&D ",online,NULL,NULL,11
+6,2,2,Digital Content ,11,11,Skill India ,offline,NULL,ok,1
+7,20,11,ERGERGE VER RWGW EWFEW ,16,24,Skill India ,offline,NULL,OKK Done,1
+10,3,3,Basic skills for Chair Making ,"13  ,   14  ,   15 ","16  ,   24 ","IO  ,   BPR&D  ,   Skill India ",offline,NULL,OKK Done,1
+9,21,14,Introduction -1 ,"11  ,   14 ",24,"BPR&D  ,   Skill India ",offline,NULL,OKK Done,1
+14,2,2,automation ,13,14,IO ,offline,regular,NULL,1
+15,3,3,Basic skills for Chair Making ,14,15,DP&CS ,offline,regular,NULL,1
+16,6,6,Craft and Art model ,"13  ,   14  ,   26 ",13,"IO  ,   Skill India ",offline,basic,NULL,1
+18,32,20,Course M. ,"13  ,   14  ,   35 ",11,"IO  ,   BPR&D ",offline,basic,okkkkkkkkk,1

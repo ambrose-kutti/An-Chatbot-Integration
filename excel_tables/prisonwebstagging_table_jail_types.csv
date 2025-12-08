@@ -1,0 +1,9 @@
+,name,jail_type
+1,Circle Jail,circlejail
+2,District Jail,districtjail
+3,Special Jail,specialjail
+4,Special Sub Jail,specialsubjail
+5,Sub Jail,subjail
+6,Women Jail,womenjail
+7,Open Air Jail,openjail
+8,Convict Jail,convictjail
