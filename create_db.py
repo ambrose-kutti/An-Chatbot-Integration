@@ -18,6 +18,7 @@ class FastEmbedder:
             print("Model loaded successfully.")
         except Exception as e:
             print("ERROR: Could not load MiniLM model.")
+            print("Ensure you have an active internet connection for the initial download.")
             print(str(e))
             sys.exit(1)
 
