@@ -99,7 +99,6 @@ def init_singleton():
     _initialized = True
     return True
 
-
 # ---------- MODELS ----------
 class Query(BaseModel):
     question: str
@@ -110,7 +109,6 @@ class ChatResponse(BaseModel):
     documents_found: int = 0
     response_time: float = 0.0
     status: str = "success"
-
 
 # ---------- HELPER FUNCTIONS ----------
 def is_relevant(current_query: str, previous_query: str):
@@ -400,7 +398,6 @@ async def debug_clear_history():
 async def home(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
-
 # ---------- STARTUP ----------
 @app.on_event("startup")
 async def startup_event():
@@ -418,7 +415,6 @@ async def startup_event():
     print("="*50 + "\n")
     
     init_singleton()
-
 
 # ---------- MAIN ----------
 if __name__ == "__main__":
