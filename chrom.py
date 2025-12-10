@@ -39,7 +39,7 @@ embedder = FastEmbedder()
 csv_files = glob.glob("excel_tables/*.csv")
 
 if not csv_files:
-    print("ERROR: No CSV files found in /excel_tables/*.csv")
+    print("ERROR: No CSV files found in excel_tables/*.csv folder")
     sys.exit(1)
 
 docs = []
@@ -72,7 +72,7 @@ if not test_vec:
 print("Embedding test passed ✓")
 
 # ---- BUILD CHROMA ----
-print("Building Chroma DB...")
+print("Building Chroma DB....")
 
 db = Chroma.from_documents(
     documents=docs,
