@@ -15,4 +15,4 @@ db = Chroma(
     embedding_function=FastEmbedder()
 )
 
-print("Total documents:", db._collection.count())
+print("Total documents present in the chrom db is:", db._collection.count())
