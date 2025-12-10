@@ -1,6 +1,6 @@
 **Project Structure**
 
-1. excel_tables -> contains the cleaned data file sin the .csv format
+1. excel_tables -> contains the cleaned data files in the .csv format
 2. static folder -> contains the styles and the javascript files **(style.css and script.js)**
 3. templates folder -> it contains the HTML part **(index1.html)**
 4. app.py -> the backend function and all the renderings part
