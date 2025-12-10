@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const typingDiv = document.getElementById('typing');
     const sendBtn = document.getElementById('send-btn');
     
-    // Add message to chat
+    // Add message to chat 
     function addMessage(text, isUser = false) {
         const messageDiv = document.createElement('div');
         messageDiv.className = `message ${isUser ? 'user' : 'bot'}`;
