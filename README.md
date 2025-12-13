@@ -33,6 +33,8 @@ mysql-connector-python: latest
 ├── count.py
 ├── re.txt
 ├── requirements.txt
+├── excel_files
+│   ├── (paste all your csv files in here)
 ├── static
 │   ├── script.js
 │   └── style.css
@@ -52,6 +54,7 @@ mysql-connector-python: latest
 5. If you dont have Ollama download it and select the model you want to use (in this case (MISTRAL))
 6. Then pull the respected model in the terminal using the command
    - `ollama pull mistral` (you can use your own choice of model)
+7. Create a Excel_file folder and paste all your csv files in here,this is utilized for the chroma embeddings
 8. Run the chrom.py first to create the chroma DB
 9. Then the run the count.py to check how many files are there in the Chroma DB
 10. Finally run the app.py file
