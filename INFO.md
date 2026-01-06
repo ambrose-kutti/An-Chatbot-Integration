@@ -11,8 +11,8 @@
 **Running Procedures**
 
 1. First create an virtual environment (python -m venv venv)
-2. activate the environment (venv/scripts/activate)
-3. install the requirements.txt file for additional install the (re.txt file also)
+2. activate the virtual environment (venv/scripts/activate)
+3. install the **requirements.txt** file and also for additional modules install the **re.txt** file also
 4. run the chrom.py file and the chrom DB is created automatically
 5. run the count.py file to check
 6. run the app.py file and in browser enter **localhost** instead of **0.0.0.0**
