@@ -4,7 +4,7 @@
 2. static folder -> contains the styles and the javascript files **(style.css and script.js)**
 3. templates folder -> it contains the HTML part **(index.html)**
 4. app.py -> the backend function and all the renderings part
-5. chrom.py -> this is the file which is used to convert the csv file into chrome embeds
+5. create_chroma_db.py -> this is the file which is used to convert the csv file into chrome embeds
 6. count.py -> after running the chrom.pt to check how many files count is there 
 7. requirements.txt -> contains the modules and libraries to be installed for the project workings
 
